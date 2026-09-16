@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <climits>
 using namespace std;
 
 int main()
@@ -52,24 +53,53 @@ int main()
 	system("pause"); // somente no Windows
 	system("cls");
 
+	cout << "int  maxima = " << INT_MAX << "\n";
+	cout << "int  minima = " << INT_MIN << "\n";
+	cout << "short maxima = " << SHRT_MAX << "\n";
+	//um INT_MAX + 1´sera igual a -2147483648
+
+	cout << endl << endl;
+
+	int celcius = 0;
+	double fahrenheit = celcius * 1.8 + 32;
+	double kelvin = celcius + 273.15;
+
+	cout << "Digite a temperatura em Celcius: \n";
+	cin >> celcius;
+	cout << "Temperatura em Fahrenheit: " << fahrenheit << "\n";
+	cout << "Temperatura em Kelvin: " << kelvin << "\n";
+
+	cout << endl << endl;
+
+	long tempo_s = 0;
+
+	cout << "Digite o tempo em segundos: \n";
+	cin >> tempo_s;
+
+	long QDias = tempo_s / 86400;
+	 tempo_s = tempo_s % 86400;
+
+	long QHoras = tempo_s / 3600;
+	tempo_s = tempo_s % 3600;	
+
+	long QMinutos = tempo_s / 60;
+	tempo_s = tempo_s % 60;
+
+	
+	cout << "Tempo em dias: " << QDias << "\n";
+	cout << "Tempo em horas: " << QHoras << "\n";
+	cout << "Tempo em minutos: " << QMinutos << "\n";
+	cout << "Tempo em segundos: " << tempo_s << "\n";
+
+
+
+
+	cout << endl << endl;
+
 	cout << "Entrada de Dados" << endl;
 	cout << "================" << endl;
 	string nome = "";
-	int idade = 0;
-	int dias = 0;
-	int horas = 0;
-	int minutos = 0;
-
-	cout << "Digite seu nome: ";
-	cin >> nome;
-	cout << "Digite sua idade: ";
-	cin >> idade;
-	dias = idade * 365;
-	horas = dias * 24;
-	minutos = horas  * 60;
-	cout << "Sua idade em dias e: " << dias << endl;
-	cout << "Sua idade em horas e: " << horas << endl;
-	cout << "Sua idade em minutos e: " << minutos << endl;
+	
 
 	cout << "Qualquer tecla para sair...";
 	system("pause"); // somente no Windows
